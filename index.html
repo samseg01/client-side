@@ -31,7 +31,7 @@
         async function connectToSocketIO() {
             // const socketAddress = await getSocketAddress();
             // console.log(socketAddress)
-            const socket = io('http://api-websocket-production.up.railway.app:7402/');
+            const socket = io(await getSocketAddress());
 
             // Manipula eventos de conexão e mensagens conforme necessário
             socket.on('connect', () => {
