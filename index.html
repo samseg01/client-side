@@ -31,7 +31,10 @@
         async function connectToSocketIO() {
             // const socketAddress = await getSocketAddress();
             // console.log(socketAddress)
-            const socket = io(await getSocketAddress());
+            //'https://api-websocket-production.up.railway.app/
+            const socket = io('https://api-websocket-production.up.railway.app/', {
+                withCredentials: true
+            });
 
             // Manipula eventos de conexão e mensagens conforme necessário
             socket.on('connect', () => {
